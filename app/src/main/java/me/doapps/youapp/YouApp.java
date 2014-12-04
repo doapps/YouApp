@@ -49,7 +49,7 @@ public class YouApp extends ActionBarActivity {
          *
          */
         interstitial = new InterstitialAd(this);
-        interstitial.setAdUnitId("ca-app-pub-8995045147204986/6753137354");
+        interstitial.setAdUnitId(getResources().getString(R.string.admob_interstitial));
         AdRequest adRequest = new AdRequest.Builder().build();
         interstitial.loadAd(adRequest);
 
