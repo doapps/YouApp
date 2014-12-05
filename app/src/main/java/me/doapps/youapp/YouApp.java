@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v4.widget.DrawerLayout;
+import android.view.View;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
+import com.shamanland.fab.FloatingActionButton;
 
 import me.doapps.beans.API_DTO;
 import me.doapps.beans.Channel_DTO;
@@ -59,8 +61,24 @@ public class YouApp extends ActionBarActivity {
         AdView adView = (AdView)findViewById(R.id.adView);
         AdRequest adRequestb= new AdRequest.Builder().build();
         adView.loadAd(adRequestb);
+
+        /**
+         *
+         */
+        FloatingActionButton fab_share = (FloatingActionButton)findViewById(R.id.fab_share);
+        fab_share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_TEXT,"https://play.google.com/store/search?q=cristian%20alex%20palomino%20rivera");
+                startActivity(Intent.createChooser(intent, "Compartir"));
+            }
+        });
     }
 
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.youapp, menu);
@@ -80,6 +98,7 @@ public class YouApp extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    */
 
     public void restoreActionBar() {
         ActionBar actionBar = getSupportActionBar();
