@@ -88,7 +88,7 @@ public class Adapter_Video extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 PopupMenu popup = new PopupMenu(context,v);
-                popup.getMenuInflater().inflate(R.menu.video,popup.getMenu());
+                popup.getMenuInflater().inflate(R.menu.youapp,popup.getMenu());
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     public boolean onMenuItemClick(MenuItem item) {
                         if(item.getItemId() == R.id.compartir){
