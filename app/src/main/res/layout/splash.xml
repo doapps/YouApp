@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageView"
             android:layout_gravity="center"
-            android:src="@drawable/logo"
+            android:src="@drawable/icon_youapp_new"
             android:adjustViewBounds="true"
             android:padding="20dp" />
     </LinearLayout>

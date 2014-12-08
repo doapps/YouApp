@@ -14,6 +14,7 @@ public class Splash extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
+        getSupportActionBar().hide();
  
         new Handler().postDelayed(new Runnable() {
  
